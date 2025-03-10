@@ -196,21 +196,19 @@ terraform -v
 
 ## Создаем ВМ
 
-![image](https://github.com/user-attachments/assets/1b7a61db-c6a1-4c29-9d70-222f8eeb5a58)
+![image](https://github.com/user-attachments/assets/0de6ae3f-64cc-4d1e-a18b-a8430daa8976)
 
 ## Инструкция у Zabbix есть на сайте
 
-![image](https://github.com/user-attachments/assets/a2767d4c-1440-4e3f-90c7-34f0f357f2ca)
-
-![image](https://github.com/user-attachments/assets/1dfef6e1-672a-4ce1-9f2d-72c865da8618)
+![image](https://github.com/user-attachments/assets/2ca68d5e-4834-4142-9bed-68b3aae99173)
 
 ## Устанавливаем агента 1-я ВМ
 
-![image](https://github.com/user-attachments/assets/a9b46bec-cd26-4a19-a0a7-674aad94b262)
+![image](https://github.com/user-attachments/assets/3694d9ed-b9ba-4010-a759-b7fe6ded5565)
 
 ## Устанавливаем агента 2-я ВМ
 
-![image](https://github.com/user-attachments/assets/8c8a20f0-fe91-4a7c-95de-289d2ee2d5d1)
+![image](https://github.com/user-attachments/assets/b3dfe09c-4613-4dec-89db-1823ef85e608)
 
 ## На выходе получаем установленные агенты на ВМ
 
