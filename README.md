@@ -138,13 +138,9 @@ terraform -v
 
 # Bastion
 
-![image](https://github.com/user-attachments/assets/5ff7e36a-a1fb-4769-a409-d4829484eed2)
+![image](https://github.com/user-attachments/assets/cb0f4847-83df-445b-84f1-163a8c2d8038)
 
-![image](https://github.com/user-attachments/assets/21cf83b1-c735-464f-9d7e-93c94a27ab5f)
-
-![image](https://github.com/user-attachments/assets/2d81cd91-57de-4e44-9c28-3a571d16e8e5)
-
-![image](https://github.com/user-attachments/assets/886c170f-d4f4-4268-93f4-bee3e92de20f)
+![image](https://github.com/user-attachments/assets/84668da2-2f9a-4356-b92d-4f14d1f83f70)
 
 ## Подключимся через Бастион к нашим ВМ: (Команда: ssh -J ubuntu@<публичный_IP_бастиона> ubuntu@<внутренний_IP_ВМ>)
 
