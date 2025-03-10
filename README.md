@@ -68,7 +68,8 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 
 
-![image](https://github.com/user-attachments/assets/2b573957-dad2-4e19-a271-39570c0c4e2d)
+![image](https://github.com/user-attachments/assets/30b247ee-83e6-43b3-955a-59369dd3b0d2)
+
 
 
 Установим 1-ую программу:
@@ -81,13 +82,13 @@ sudo mv terraform /usr/local/bin/
 
 terraform -v
 
-![image](https://github.com/user-attachments/assets/2b89d37e-1b24-4de0-a512-e9442afcbb79)
+![image](https://github.com/user-attachments/assets/051c4607-579f-444b-8215-72f584759815)
+
 
 Установим 2-ую программу:
 
-- Для установки Ансибла сначала нужно установить питона
+![image](https://github.com/user-attachments/assets/d95905f8-08b2-45be-895a-a35685a11ba7)
 
-![image](https://github.com/user-attachments/assets/06ed46aa-281c-4bb4-a3a8-c06e73ac2772)
 
 Нужно было поключить CLI по инструкции от YANDEX CLOUD https://yandex.cloud/ru/docs/cli/quickstart#yandex-account_1
 
@@ -109,23 +110,23 @@ terraform -v
 
 # variables.tf:
 
-![image](https://github.com/user-attachments/assets/204352e6-a477-485d-a544-4d97106b462e)
+![image](https://github.com/user-attachments/assets/d8d9e64b-b168-4286-983b-f33315d83f43)
 
 ## providers.tf:
 
-![image](https://github.com/user-attachments/assets/7f04fc1f-6034-4ef6-8d16-5aa3a4ebf671)
+![image](https://github.com/user-attachments/assets/5cc0d261-6499-4f23-8a7a-c4e016fae3b7)
 
 ## network.tf:
 
-![image](https://github.com/user-attachments/assets/ee0a3b4e-1e98-487d-ac22-95d6cd8e4a73)
+![image](https://github.com/user-attachments/assets/892bc509-5140-43c1-9710-2df403e751e7)
 
 ## vms.tf:
 
-![image](https://github.com/user-attachments/assets/26cbc627-cc1f-4284-b30e-eb2483502dd6)
+![image](https://github.com/user-attachments/assets/93858764-4ddc-48e7-b0f3-445669e5f390)
 
 ## outputs.tf:
 
-![image](https://github.com/user-attachments/assets/4e3266a5-b50a-4016-912a-e0a62896e854)
+![image](https://github.com/user-attachments/assets/db9f1b81-cae5-4b32-ab51-ed7d417fd5bf)
 
 ## На выходе мы получили:
 
