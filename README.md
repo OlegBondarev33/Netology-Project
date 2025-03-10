@@ -212,7 +212,7 @@ terraform -v
 
 ## На выходе получаем установленные агенты на ВМ
 
-![image](https://github.com/user-attachments/assets/5d3858b9-5b13-4041-a0de-515bd3dfb2dd)
+![image](https://github.com/user-attachments/assets/a26f667f-0f3d-4cbf-aaa9-ce0cb25bc100)
 
 ## Выключим ВМ
 
