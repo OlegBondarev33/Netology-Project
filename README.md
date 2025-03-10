@@ -148,53 +148,49 @@ terraform -v
 
 ## Подключимся через Бастион к нашим ВМ: (Команда: ssh -J ubuntu@<публичный_IP_бастиона> ubuntu@<внутренний_IP_ВМ>)
 
-![image](https://github.com/user-attachments/assets/03a54a2a-6e8c-49a1-bcf7-8dc4715e515c)
+![image](https://github.com/user-attachments/assets/06ae42f1-04e4-461a-8c63-96e8997c5bd0)
 
-![image](https://github.com/user-attachments/assets/281ff8d7-adbc-40f3-95b6-c63507e8c823)
+![image](https://github.com/user-attachments/assets/ed45b851-0f05-49a2-93da-3c3c38e29505)
 
-![image](https://github.com/user-attachments/assets/22fa1587-c319-420f-ab47-482eaf5c3ce6)
+![image](https://github.com/user-attachments/assets/1c708325-e46a-4c88-9669-df4ea47d901b)
 
 ## Создадим Target_Group и включим в неё 2 созданных ВМ
 
-![image](https://github.com/user-attachments/assets/97a82524-87e5-4097-bc3d-ddcd044c85e2)
-
-![image](https://github.com/user-attachments/assets/e2f3d1d3-b875-4a7d-917b-e125a9b52327)
+![image](https://github.com/user-attachments/assets/259ec6a3-a2b9-46b7-b9fe-9cb44990aa02)
 
 ## Создадим Backend Group и настроим на target group
 
-![image](https://github.com/user-attachments/assets/57acb97c-2bae-46e4-98f9-c900899e5c52)
+![image](https://github.com/user-attachments/assets/304b1273-2673-4f07-8cb1-f80f082ec68c)
 
-![image](https://github.com/user-attachments/assets/1aeef05a-0df1-4e72-8e20-a6ffe525cf32)
-
-![image](https://github.com/user-attachments/assets/879f2206-195c-4a82-a647-4f9e920bd77c)
+![image](https://github.com/user-attachments/assets/dcadb1d8-c7fe-4cec-aef8-2d9604f506ce)
 
 ## Создадим HTTP Router
 
-![image](https://github.com/user-attachments/assets/eab800da-9405-4cbe-96f0-86a25a376f33)
+![image](https://github.com/user-attachments/assets/ac5f1dc3-f126-4364-b0bf-4554309383f2)
 
 ## Создадим Балансировщик
 
-![image](https://github.com/user-attachments/assets/836c8efa-c986-4513-ab8d-31ac6f0c5420)
+![image](https://github.com/user-attachments/assets/04a8fc42-ae48-43b2-8142-a851fb47365f)
 
 ## Работа Балансировщика
 
-![image](https://github.com/user-attachments/assets/4fa4b5c7-c6fb-45ff-9f5a-fd294374ddb8)
+![image](https://github.com/user-attachments/assets/18c96775-8c5e-40eb-a4f8-df92617ff97c)
 
-![image](https://github.com/user-attachments/assets/ced0f7c8-fb4c-4bbf-9f7a-42a12c98e758)
+![image](https://github.com/user-attachments/assets/abb35d49-d6f0-4c73-abfe-11260190e081)
 
 ## Смотри логи балансировщика
 
-![image](https://github.com/user-attachments/assets/506f507d-73df-45ea-ae9b-75e7e8515e63)
+![image](https://github.com/user-attachments/assets/779db4d6-c3d8-4785-b565-06581c54c007)
 
-![image](https://github.com/user-attachments/assets/07bf3792-56e8-4b48-8aab-a3fafb5caf6d)
+![image](https://github.com/user-attachments/assets/4d4465aa-f47c-4bc6-8d86-506063585da8)
 
 ## Мониторинг
 
-![image](https://github.com/user-attachments/assets/48c11f3a-8aeb-49e0-947a-c821dc71090f)
+![image](https://github.com/user-attachments/assets/7f46a268-ec82-4395-b336-3ee60d3f9e7e)
 
 ## Карта балансироки
 
-![image](https://github.com/user-attachments/assets/bf7de1cc-d50b-4708-acae-8e9a742e5f0a)
+![image](https://github.com/user-attachments/assets/be02b18f-3634-45b9-ac9a-d04a42cf0f04)
 
 # ZABBIX
 
