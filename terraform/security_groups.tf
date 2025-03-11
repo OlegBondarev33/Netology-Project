@@ -29,4 +29,10 @@ resource "yandex_vpc_security_group" "internal_vms_sg" {
     v4_cidr_blocks = ["${yandex_compute_instance.bastion.network_interface[0].ip_address}/32"]
     description = "Allow SSH from Bastion Host"
   }
+  ingress {  # Добавляем это правило
+    protocol       = "tcp"
+    port           = 80
+    v4_cidr_blocks = ["0.0.0.0/0"]  # Allow HTTP from anywhere (for testing)
+    description = "Allow HTTP traffic"
+  }
 }
