@@ -232,3 +232,20 @@ terraform -v
 
 
 ![image](https://github.com/user-attachments/assets/8e735354-3a07-4a52-9589-2ae431339e97)
+
+# Elasticsearch
+
+## Создаем ВМ
+
+![image](https://github.com/user-attachments/assets/622f72c2-aa7d-45ad-b30e-3a7418caa446)
+
+![image](https://github.com/user-attachments/assets/d3a91f32-b5e7-42c5-80ca-99bb59377479)
+
+
+# Kibana
+
+## Создаем ВМ
+
+![image](https://github.com/user-attachments/assets/5eb79e9e-6a48-42fa-9e27-81ce6464092a)
+
+![image](https://github.com/user-attachments/assets/5e1ac9fc-02fe-4dbd-9551-9c01c0c2b76a)
