@@ -58,7 +58,7 @@ variable "vm_size" {
 variable "your_ip_address" {
   type        = string
   description = "Your public IP address (for SSH access to the bastion)"
-  default = "93.157.168.26/32" # Replace with your actual IP!  (e.g., "123.45.67.89/32")
+  default = "93.157.168.26/32"
 }
 
 variable "alb_name" {
