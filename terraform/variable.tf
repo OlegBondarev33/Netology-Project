@@ -72,3 +72,15 @@ variable "healthcheck_path" {
   description = "Healthcheck path for backend group"
   default     = "/"
 }
+
+variable "zabbix_version" {
+  type        = string
+  description = "Zabbix version to install"
+  default     = "7.2"
+}
+
+variable "vm_prefix" {
+  type        = string
+  description = "Prefix for VM names"
+  default     = "vm-zabbix"
+}
