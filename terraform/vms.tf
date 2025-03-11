@@ -16,14 +16,14 @@ resource "yandex_compute_instance" "vm_a" {
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_a.id
-    nat       = false # No public IP address
+    nat       = false 
   }
 
   metadata = {
-    ssh-keys = "ubuntu:${var.ssh_public_key}" # Replace 'ubuntu' with the correct username for your image
+    ssh-keys = "ubuntu:${var.ssh_public_key}" 
   }
 
-  depends_on = [yandex_vpc_subnet.default_subnet_a] # Ensures subnet is created first
+  depends_on = [yandex_vpc_subnet.default_subnet_a] 
 }
 
 
@@ -45,11 +45,11 @@ resource "yandex_compute_instance" "vm_b" {
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_b.id
-    nat       = false # No public IP address
+    nat       = false 
   }
 
   metadata = {
-    ssh-keys = "ubuntu:${var.ssh_public_key}" # Replace 'ubuntu' with the correct username for your image
+    ssh-keys = "ubuntu:${var.ssh_public_key}" 
   }
-  depends_on = [yandex_vpc_subnet.default_subnet_b] # Ensures subnet is created first
+  depends_on = [yandex_vpc_subnet.default_subnet_b] 
 }
