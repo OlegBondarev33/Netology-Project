@@ -92,7 +92,7 @@ terraform -v
 
 Нужно было поключить CLI по инструкции от YANDEX CLOUD https://yandex.cloud/ru/docs/cli/quickstart#yandex-account_1
 
-![image](https://github.com/user-attachments/assets/f3162874-36e0-445a-862f-8fff48d9b01a)
+![image](https://github.com/user-attachments/assets/e8603280-022f-4cea-b33a-2bf400ccc79a)
 
 Так выглядит структура:
 
