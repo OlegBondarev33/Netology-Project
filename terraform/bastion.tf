@@ -1,6 +1,6 @@
 resource "yandex_compute_instance" "bastion" {
   name        = "bastion-host"
-  zone        = var.default_zone # Or choose another zone
+  zone        = var.default_zone
   platform_id = "standard-v1"
 
   resources {
@@ -20,6 +20,6 @@ resource "yandex_compute_instance" "bastion" {
   }
 
   metadata = {
-    ssh-keys = "ubuntu:${var.ssh_public_key}" # Replace 'ubuntu' with the correct username for your image
+    ssh-keys = "ubuntu:${var.ssh_public_key}"
   }
 }
