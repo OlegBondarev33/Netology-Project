@@ -60,3 +60,15 @@ variable "your_ip_address" {
   description = "Your public IP address (for SSH access to the bastion)"
   default = "93.157.168.26/32" # Replace with your actual IP!  (e.g., "123.45.67.89/32")
 }
+
+variable "alb_name" {
+  type        = string
+  description = "Name for the Application Load Balancer"
+  default     = "my-alb"
+}
+
+variable "healthcheck_path" {
+  type        = string
+  description = "Healthcheck path for backend group"
+  default     = "/"
+}
