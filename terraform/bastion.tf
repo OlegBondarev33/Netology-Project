@@ -6,6 +6,7 @@ resource "yandex_compute_instance" "bastion" {
   resources {
     cores  = 2
     memory = 2
+    core_fraction = 20
   }
 
   boot_disk {
@@ -16,10 +17,10 @@ resource "yandex_compute_instance" "bastion" {
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_a.id
-    nat       = true # Public IP address
+    nat       = true
   }
 
   metadata = {
-    ssh-keys = "ubuntu:${var.ssh_public_key}"
+    ssh-keys = "vboxuser:${var.ssh_public_key}"
   }
 }
