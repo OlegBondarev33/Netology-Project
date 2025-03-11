@@ -130,11 +130,7 @@ terraform -v
 
 ## На выходе мы получили:
 
-![image](https://github.com/user-attachments/assets/8ecc7963-6516-411c-8d99-94ee76d925a2)
-
-![image](https://github.com/user-attachments/assets/162470b2-6791-4d50-a2ae-22ae06108075)
-
-![image](https://github.com/user-attachments/assets/e7e5879f-3701-42cf-a991-285d7218311a)
+![image](https://github.com/user-attachments/assets/ed24d385-5c58-4ddb-9263-92bdd4796177)
 
 # Bastion
 
