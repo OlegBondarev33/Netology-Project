@@ -253,7 +253,7 @@ terraform -v
 
 ![image](https://github.com/user-attachments/assets/5eb79e9e-6a48-42fa-9e27-81ce6464092a)
 
-![image](https://github.com/user-attachments/assets/5e1ac9fc-02fe-4dbd-9551-9c01c0c2b76a)
+![image](https://github.com/user-attachments/assets/6bb45a4b-9171-43a1-b8f2-c177367d82f1)
 
 ![image](https://github.com/user-attachments/assets/e32fbbd7-e402-455c-8fe5-63c390224b30)
 
@@ -262,3 +262,7 @@ terraform -v
 ![image](https://github.com/user-attachments/assets/03b02fd9-13f8-459f-ad45-1f72dd6d0780)
 
 ![image](https://github.com/user-attachments/assets/b26b1b28-5359-4c3d-bb61-046f709b8d0d)
+
+![image](https://github.com/user-attachments/assets/431af55b-2a6a-452d-a3e9-c0a97b4de60f)
+
+![image](https://github.com/user-attachments/assets/88ef7095-61bd-46f5-a2c4-efcd38005db9)
