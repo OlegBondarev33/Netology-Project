@@ -258,3 +258,7 @@ terraform -v
 ![image](https://github.com/user-attachments/assets/e32fbbd7-e402-455c-8fe5-63c390224b30)
 
 ![image](https://github.com/user-attachments/assets/323d3d38-f96d-40f0-bce3-d167767de89d)
+
+![image](https://github.com/user-attachments/assets/03b02fd9-13f8-459f-ad45-1f72dd6d0780)
+
+![image](https://github.com/user-attachments/assets/b26b1b28-5359-4c3d-bb61-046f709b8d0d)
