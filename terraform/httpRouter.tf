@@ -2,8 +2,8 @@ resource "yandex_alb_http_router" "http-router" {
   name = "http-router"
 }
 
-resource "yandex_alb_virtual_host" "root" {
-  name           = "root-virtual-host"
+resource "yandex_alb_virtual_host" "virt-host" {
+  name           = "virt-host"
   http_router_id = yandex_alb_http_router.http_router.id
   route {
     name = "root-path"
