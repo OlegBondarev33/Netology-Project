@@ -266,3 +266,7 @@ terraform -v
 ![image](https://github.com/user-attachments/assets/431af55b-2a6a-452d-a3e9-c0a97b4de60f)
 
 ![image](https://github.com/user-attachments/assets/88ef7095-61bd-46f5-a2c4-efcd38005db9)
+
+# Резервное копирование
+
+![image](https://github.com/user-attachments/assets/c8e82cdd-4973-4eb3-9b63-a4908a87efe3)
