@@ -245,6 +245,7 @@ terraform -v
 
 ![image](https://github.com/user-attachments/assets/873225bd-d804-427f-bc01-5b218177be0f)
 
+![image](https://github.com/user-attachments/assets/4c090881-68ef-48f6-9c52-b84919547c0e)
 
 # Kibana
 
