@@ -241,6 +241,10 @@ terraform -v
 
 ![image](https://github.com/user-attachments/assets/d3a91f32-b5e7-42c5-80ca-99bb59377479)
 
+## С помощью ansible устанавливаем elasticsearch
+
+![image](https://github.com/user-attachments/assets/873225bd-d804-427f-bc01-5b218177be0f)
+
 
 # Kibana
 
