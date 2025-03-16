@@ -3,7 +3,37 @@ resource "yandex_compute_snapshot_schedule" "snapshots" {
   description    = "snapshots seven days"
  
     schedule_policy {
-    expression = "0 1 * * *"
+        schedule {
+      weekly_schedule {
+        day_of_week {
+          day = "MONDAY"
+          start_time = "00:00"
+        }
+        day_of_week {
+          day = "TUESDAY"
+          start_time = "00:00"
+        }
+        day_of_week {
+          day = "WEDNESDAY"
+          start_time = "00:00"
+        }
+        day_of_week {
+          day = "THURSDAY"
+          start_time = "00:00"
+        }
+        day_of_week {
+          day = "FRIDAY"
+          start_time = "00:00"
+        }
+        day_of_week {
+          day = "SATURDAY"
+          start_time = "00:00"
+        }
+        day_of_week {
+          day = "SUNDAY"
+          start_time = "00:00"
+        }
+      }
   }
 
   retention_period = "168h"
