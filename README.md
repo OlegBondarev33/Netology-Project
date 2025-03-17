@@ -267,6 +267,12 @@ terraform -v
 
 ![image](https://github.com/user-attachments/assets/88ef7095-61bd-46f5-a2c4-efcd38005db9)
 
+## Устанавливаем filebeat на ВМ
+
+![image](https://github.com/user-attachments/assets/ef6d141e-587b-48ca-8425-e1e4bd8ce702)
+
+![image](https://github.com/user-attachments/assets/b93f7f2d-29fd-4b2d-8a65-4549ab158280)
+
 # Резервное копирование
 
 ![image](https://github.com/user-attachments/assets/c8e82cdd-4973-4eb3-9b63-a4908a87efe3)
