@@ -1,5 +1,25 @@
 ---
-- hosts: elasticsearch
-  become: true
-  roles:
-    - elasticsearch
+- name: 
+  hosts: elastic_srv
+  become: yes
+  gather_facts: true
+
+  tasks:
+  - name: 
+    apt:
+      deb: "https://mirror.g-soft.info/elasticsearch/elasticsearch-oss_6.8.23_all.deb"
+
+  - name: 
+    copy:
+      src: /home/ubuntu/ansible/elastic_conf.yml
+      dest: /etc/elasticsearch/elasticsearch.yml
+
+  - name: daemon_reload
+    systemd:
+      daemon_reload: true
+
+  - name: 
+    service:
+      name: elasticsearch
+      state: restarted
+      enabled: yes
