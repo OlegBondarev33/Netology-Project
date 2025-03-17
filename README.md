@@ -271,6 +271,10 @@ terraform -v
 
 ![image](https://github.com/user-attachments/assets/c8e82cdd-4973-4eb3-9b63-a4908a87efe3)
 
+## Выполнение снимков
+
+![image](https://github.com/user-attachments/assets/ec2b4b71-fe4e-4f9a-825a-999d14575718)
+
 # Сеть
 
 ## VPC и subnet
