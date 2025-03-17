@@ -273,6 +273,11 @@ terraform -v
 
 ![image](https://github.com/user-attachments/assets/b93f7f2d-29fd-4b2d-8a65-4549ab158280)
 
+## Проверяем что filebeat доставляет логи в elasticsearch
+
+![image](https://github.com/user-attachments/assets/8a801299-c003-4ebd-b69d-e07f1f308a64)
+
+
 # Резервное копирование
 
 ![image](https://github.com/user-attachments/assets/c8e82cdd-4973-4eb3-9b63-a4908a87efe3)
