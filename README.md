@@ -270,3 +270,9 @@ terraform -v
 # Резервное копирование
 
 ![image](https://github.com/user-attachments/assets/c8e82cdd-4973-4eb3-9b63-a4908a87efe3)
+
+# Сеть
+
+## VPC и subnet
+
+![image](https://github.com/user-attachments/assets/655eaf34-0aa1-4198-85e3-698119407c38)
