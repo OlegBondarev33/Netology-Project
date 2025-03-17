@@ -12,7 +12,7 @@ resource "yandex_alb_load_balancer" "balanser" {
   }
 
   listener {
-    name = "my-listener"
+    name = "mikky"
     endpoint {
       address {
         external_ipv4_address {
