@@ -14,8 +14,8 @@ resource "yandex_compute_disk" "disk_vm_b" {
   size     = 10  
 }
 
-resource "yandex_compute_disk" "disk_vm_a" {
-  name     = "fhm6neu5hmimvvtgrts2"
+resource "yandex_compute_disk" "disk_kibana_vm" {
+  name     = "fhmve8p2bmoii6gu33nb"
   type     = "network-hdd"
   zone     = "ru-central1-a"
   image_id = "fd8arv291825p8bbvmb1"
