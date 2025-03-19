@@ -49,3 +49,26 @@ resource "yandex_vpc_security_group" "bastion_sg" {
     v4_cidr_blocks = ["0.0.0.0/0"]  
   }
 }
+
+
+resource "yandex_vpc_security_group" "alb-w2q" {
+  name        = "alb-w2q"
+  description = "Security group for Balancer"
+  network_id  = yandex_vpc_network.default_network.id
+
+  ingress {
+    protocol       = "tcp"
+    port           = 30080
+    v4_cidr_blocks = ["158.160.177.58/32"]
+  }
+  ingress {
+    protocol       = "ANY"
+    port           = 80
+    v4_cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    protocol       = "tcp"
+    v4_cidr_blocks = ["0.0.0.0/0"]  
+  }
+}
