@@ -3,37 +3,7 @@ resource "yandex_compute_snapshot_schedule" "snapshots" {
   description    = "snapshots seven days"
  
     schedule_policy {
-        schedule {
-      weekly_schedule {
-        day_of_week {
-          day = "MONDAY"
-          start_time = "00:00"
-        }
-        day_of_week {
-          day = "TUESDAY"
-          start_time = "00:00"
-        }
-        day_of_week {
-          day = "WEDNESDAY"
-          start_time = "00:00"
-        }
-        day_of_week {
-          day = "THURSDAY"
-          start_time = "00:00"
-        }
-        day_of_week {
-          day = "FRIDAY"
-          start_time = "00:00"
-        }
-        day_of_week {
-          day = "SATURDAY"
-          start_time = "00:00"
-        }
-        day_of_week {
-          day = "SUNDAY"
-          start_time = "00:00"
-        }
-      }
+    expression = "0 1 * * *"
   }
 
   retention_period = "168h"
@@ -44,21 +14,21 @@ resource "yandex_compute_snapshot_schedule" "snapshots" {
   }
 
   disk_ids = [
-    "${yandex_compute_disk.epde2vn4sg2dntvtbvm1.id}",
-    "${yandex_compute_disk.fhm6neu5hmimvvtgrts2.id}",
-    "${yandex_compute_disk.fhmmk3n8jo772ke48ca4.id}",
-    "${yandex_compute_disk.fhmsjs2mh177v8rmmo39.id}",
-    "${yandex_compute_disk.fhmve8p2bmoii6gu33nb.id}",
-    "${yandex_compute_disk.fhmvro7m85vti0qvfod5.id}",
+    "${yandex_compute_disk.disk-web-1.id}",
+    "${yandex_compute_disk.disk-web-2.id}",
+    "${yandex_compute_disk.disk-bastion.id}",
+    "${yandex_compute_disk.disk-zabbix.id}",
+    "${yandex_compute_disk.disk-elastic.id}",
+    "${yandex_compute_disk.disk-kibana.id}",
   ]
 
   depends_on = [
-     yandex_compute_instance.internal-vm-b,
-     yandex_compute_instance.internal-vm-a,
-     yandex_compute_instance.vm-zabbix,
-     yandex_compute_instance.elasticsearch-vm,
-     yandex_compute_instance.kibana-vm,
-     yandex_compute_instance.bastion-host
+     yandex_compute_instance.web-1,
+     yandex_compute_instance.web-2,
+     yandex_compute_instance.bastion,
+     yandex_compute_instance.zabbix,
+     yandex_compute_instance.elastic,
+     yandex_compute_instance.kibana
   ]
 
 }
