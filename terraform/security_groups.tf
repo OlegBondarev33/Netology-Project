@@ -36,3 +36,21 @@ resource "yandex_vpc_security_group" "internal_vms_sg" {
     description = "Allow HTTP traffic"
   }
 }
+-------------------------------------------------------------
+
+resource "yandex_vpc_security_group" "internal-vms-sg" {
+  name       = "internal-vms-sg"
+  network_id = yandex_vpc_network.dipnet.id
+
+  ingress {
+    protocol       = "ANY"
+    description    = "allow any connection from internal subnets"
+	predefined_target = "self_security_group"
+  }
+
+  egress {
+    protocol       = "ANY"
+    description    = "allow any outgoing connections"
+    v4_cidr_blocks = ["0.0.0.0/0"]
+  }
+}
