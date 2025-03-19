@@ -1,5 +1,5 @@
 resource "yandex_compute_instance" "vm_a" {
-  name        = "${var.vm_prefix}-a"
+  name        = "internal-vm-a"
   zone        = var.default_zone
   platform_id = "standard-v1"
 
@@ -28,7 +28,7 @@ resource "yandex_compute_instance" "vm_a" {
 
 
 resource "yandex_compute_instance" "vm_b" {
-  name        = "${var.vm_prefix}-b"
+  name        = "internal-vm-b"
   zone        = var.second_zone
   platform_id = "standard-v1"
 
