@@ -1,0 +1,28 @@
+
+---
+- name: 
+  hosts: web
+  become: yes
+  gather_facts: true
+  vars:
+    kibana_host: 10.1.0.13:5601
+    elastic_host: 10.1.0.40:9200
+  tasks:
+  - name: 
+    apt:
+      deb: "https://mirror.g-soft.info/filebeat/filebeat-8.17.1-amd64.deb"
+
+  - name: 
+    template:
+      src: /home/ubuntu/ansible/filebeat.j2
+      dest: /etc/filebeat/filebeat.yml
+
+  - name: daemon_reload
+    systemd:
+      daemon_reload: true
+
+  - name: 
+    service:
+      name: filebeat
+      state: restarted
+      enabled: yes
