@@ -40,12 +40,12 @@ resource "yandex_vpc_security_group" "internal_vms_sg" {
 
 resource "yandex_vpc_security_group" "internal-vms-sg" {
   name       = "internal-vms-sg"
-  network_id = yandex_vpc_network.dipnet.id
+  network_id = yandex_vpc_network.default_network.id
+  description = "Security group for internal VMs"
 
   ingress {
     protocol       = "ANY"
-    description    = "allow any connection from internal subnets"
-	predefined_target = "self_security_group"
+    v4_cidr_blocks = ["${yandex_compute_instance.bastion.network_interface[0].ip_address}/32"]
   }
 
   egress {
