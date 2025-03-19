@@ -30,8 +30,8 @@ resource "yandex_compute_disk" "disk_elasticsearch_vm" {
   size     = 10  
 }
 
-resource "yandex_compute_disk" "disk_vm_a" {
-  name     = "fhm6neu5hmimvvtgrts2"
+resource "yandex_compute_disk" "disk_bastion" {
+  name     = "fhmvro7m85vti0qvfod5"
   type     = "network-hdd"
   zone     = "ru-central1-a"
   image_id = "fd8arv291825p8bbvmb1"
