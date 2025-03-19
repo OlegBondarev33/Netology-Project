@@ -10,7 +10,7 @@
 
   - name: 
     copy:
-      src: /home/user/ansible/elastic_conf.yml
+      src: /home/ubuntu/ansible/elastic_conf.yml
       dest: /etc/elasticsearch/elasticsearch.yml
 
   - name: daemon_reload
