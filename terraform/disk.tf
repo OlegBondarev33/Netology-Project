@@ -1,8 +1,8 @@
-resource "yandex_compute_disk" "disk-web-1" {
-  name     = "disk-vm-web1"
+resource "yandex_compute_disk" "disk_vm_a" {
+  name     = "fhm6neu5hmimvvtgrts2"
   type     = "network-hdd"
   zone     = "ru-central1-a"
-  image_id = "fd88rqql4soidsdqf98a"
-  size     = 8
+  image_id = "fd8arv291825p8bbvmb1"
+  size     = 10
   
 }
