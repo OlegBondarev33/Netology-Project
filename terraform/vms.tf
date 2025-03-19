@@ -9,10 +9,8 @@ resource "yandex_compute_instance" "vm_a" {
   }
 
   boot_disk {
-    initialize_params {
-      image_id = var.image_id
+    disk_id     = "${yandex_compute_disk.disk_vm_a.id}"
     }
-  }
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_a.id
