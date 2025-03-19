@@ -1,58 +1,26 @@
 ---
-- hosts: kibana-vm
-  become: true  
+- name:
+  hosts: kibana
+  become: yes
   vars:
-    kibana_version: "8.17.1"
-    elasticsearch_hosts: ["http://10.1.0.40:9200", "http://89.169.134.21:9200"]
-    kibana_system_password: "{{ lookup('env', 'KIBANA_SYSTEM_PASSWORD') }}"
-  
-    saved_objects_encryption_key: "0c1d1e2e3f4a5b6c7d8e9fa0b1c2d3e4f5a6b7c8d9e0fa1b2c3d4e5f6a7b8c9d"
-    server_host: "10.1.0.13"
-    server_port: 5601
-
+    elastic_httphost: 10.1.0.40:9200
   tasks:
-    - name:
-      apt:
-        name:
-          - apt-transport-https
-          - ca-certificates
-        state: present
-        update_cache: yes
 
-    - name:
-      apt_key:
-        url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
-        state: present
+  - name: 
+    apt:
+      deb: "https://mirror.g-soft.info/kibana/kibana-8.17.1-amd64.deb"
 
-    - name:
-      apt_repository:
-        repo: "https://mirror.g-soft.info/filebeat/filebeat-8.17.1-amd64.deb"
-        state: present
-        filename: elastic
+  - name: 
+    template:
+      src: /home/ubuntu/ansible/kibana.j2
+      dest: /etc/kibana/kibana.yml
 
-    - name:
-      apt:
-        name: kibana={{ kibana_version }}
-        state: present
-        update_cache: yes
+  - name: daemon_reload
+    systemd:
+      daemon_reload: true
 
-    - name:
-      template:
-        src: templates/kibana.yml.j2
-        dest: /etc/kibana/kibana.yml
-        owner: kibana
-        group: kibana
-        mode: 0644
-      notify: restart_kibana
-
-    - name:
-      systemd:
-        name: kibana
-        enabled: yes
-        state: started
-
-  handlers:
-    - name:
-      systemd:
-        name: kibana
-        state: restarted
+  - name: 
+    service:
+      name: kibana
+      state: restarted
+      enabled: yes
