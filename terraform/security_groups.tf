@@ -72,3 +72,52 @@ resource "yandex_vpc_security_group" "alb-w2q" {
     v4_cidr_blocks = ["0.0.0.0/0"]  
   }
 }
+
+
+resource "yandex_vpc_security_group" "elastic-sg" {
+  name        = "elastic-sg"
+  description = "Security group for ElasticSearch"
+  network_id  = yandex_vpc_network.default_network.id
+
+  ingress {
+    protocol       = "tcp"
+    port           = 22
+    v4_cidr_blocks = [var.your_ip_address]
+  }
+  ingress {
+    protocol       = "ANY"
+    v4_cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    protocol       = "tcp"
+    v4_cidr_blocks = ["0.0.0.0/0"]  
+  }
+}
+
+
+resource "yandex_vpc_security_group" "zabbix" {
+  name        = "zabbix"
+  description = "Security group for Zabbix"
+  network_id  = yandex_vpc_network.default_network.id
+
+  ingress {
+    protocol       = "tcp"
+    port           = 22
+    v4_cidr_blocks = [var.your_ip_address]
+  }
+  ingress {
+    protocol       = "ANY"
+    port           = 80
+    v4_cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    protocol       = "ANY"
+    port           = 10050
+    v4_cidr_blocks = ["0.0.0.0/0"]
+  }
+  egress {
+    protocol       = "ANY"
+    v4_cidr_blocks = ["0.0.0.0/0"]  
+  }
+}
