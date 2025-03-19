@@ -280,11 +280,11 @@ terraform -v
 
 # Резервное копирование
 
-![image](https://github.com/user-attachments/assets/c8e82cdd-4973-4eb3-9b63-a4908a87efe3)
+![image](https://github.com/user-attachments/assets/e1246d80-b477-4ab2-b2bf-ffd21f0a52e5)
 
 ## Выполнение снимков
 
-![image](https://github.com/user-attachments/assets/ec2b4b71-fe4e-4f9a-825a-999d14575718)
+![image](https://github.com/user-attachments/assets/05d33ce1-767c-4156-9443-5d45c6c034ae)
 
 # Сеть
 
