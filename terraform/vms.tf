@@ -36,10 +36,8 @@ resource "yandex_compute_instance" "vm_b" {
   }
 
   boot_disk {
-    initialize_params {
-      image_id = var.image_id
+    disk_id     = "${yandex_compute_disk.disk_vm_b.id}"
     }
-  }
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_b.id
@@ -64,10 +62,8 @@ resource "yandex_compute_instance" "kibana_vm" {
   }
 
   boot_disk {
-    initialize_params {
-      image_id = var.image_id
+    disk_id     = "${yandex_compute_disk.disk_kibana_vm.id}"
     }
-  }
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_a.id
@@ -91,10 +87,8 @@ resource "yandex_compute_instance" "elasticsearch_vm" {
   }
 
   boot_disk {
-    initialize_params {
-      image_id = var.image_id
+    disk_id     = "${yandex_compute_disk.disk_elasticsearch_vm.id}"
     }
-  }
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_a.id
@@ -118,10 +112,8 @@ resource "yandex_compute_instance" "bastion" {
   }
 
   boot_disk {
-    initialize_params {
-      image_id = var.image_id
+    disk_id     = "${yandex_compute_disk.disk_bastion.id}"
     }
-  }
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_a.id
