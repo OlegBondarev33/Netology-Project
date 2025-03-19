@@ -14,21 +14,18 @@ resource "yandex_compute_snapshot_schedule" "snapshots" {
   }
 
   disk_ids = [
-    "${yandex_compute_disk.disk-web-1.id}",
-    "${yandex_compute_disk.disk-web-2.id}",
-    "${yandex_compute_disk.disk-bastion.id}",
-    "${yandex_compute_disk.disk-zabbix.id}",
-    "${yandex_compute_disk.disk-elastic.id}",
-    "${yandex_compute_disk.disk-kibana.id}",
+    "${yandex_compute_disk.disk_vm_a.id}",
+    "${yandex_compute_disk.disk_vm_b.id}",
+    "${yandex_compute_disk.disk_kibana_vm.id}",
+    "${yandex_compute_disk.disk_elasticsearch_vm.id}",
+    "${yandex_compute_disk.disk_bastion.id}",
   ]
 
   depends_on = [
-     yandex_compute_instance.web-1,
-     yandex_compute_instance.web-2,
-     yandex_compute_instance.bastion,
-     yandex_compute_instance.zabbix,
-     yandex_compute_instance.elastic,
-     yandex_compute_instance.kibana
+     yandex_compute_instance.vm_a,
+     yandex_compute_instance.vm_b,
+     yandex_compute_instance.kibana_vm,
+     yandex_compute_instance.elasticsearch_vm,
+     yandex_compute_instance.disk_bastion,
   ]
-
 }
