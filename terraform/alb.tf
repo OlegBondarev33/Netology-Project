@@ -60,7 +60,7 @@ resource "yandex_alb_virtual_host" "virt-host" {
 
 resource "yandex_alb_load_balancer" "balanser" {
   name               = "balanser"
-  network_id         = yandex_vpc_network.dipnet.id
+  network_id         = yandex_vpc_network.default_network.id
   security_group_ids = [yandex_vpc_security_group.public-load-balancer.id, yandex_vpc_security_group.internal.id] 
 
   allocation_policy {
