@@ -214,17 +214,25 @@ terraform -v
 
 ![image](https://github.com/user-attachments/assets/2ca68d5e-4834-4142-9bed-68b3aae99173)
 
-## Устанавливаем агента 1-я ВМ
+## Установлен агент 1-я ВМ
 
 ![image](https://github.com/user-attachments/assets/3694d9ed-b9ba-4010-a759-b7fe6ded5565)
 
-## Устанавливаем агента 2-я ВМ
+## Установлен агент 2-я ВМ
 
 ![image](https://github.com/user-attachments/assets/b3dfe09c-4613-4dec-89db-1823ef85e608)
 
+## Установлен агент Elasticsearch
+
+![image](https://github.com/user-attachments/assets/958e49e3-80ed-4ded-8682-2bbb1582896d)
+
+## Установлен агент Kibana
+
+![image](https://github.com/user-attachments/assets/1c055e5a-20ad-4814-8d34-b7f1d07262bf)
+
 ## На выходе получаем установленные агенты на ВМ
 
-![image](https://github.com/user-attachments/assets/a26f667f-0f3d-4cbf-aaa9-ce0cb25bc100)
+![image](https://github.com/user-attachments/assets/683ed4c4-4441-4fd9-8bb7-46184ba17f74)
 
 ## Выключим ВМ
 
