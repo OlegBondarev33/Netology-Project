@@ -77,7 +77,7 @@ resource "yandex_alb_load_balancer" "alb" {
     name = "mikky"
     endpoint {
       address {
-        external_ipv4_address {} # Используем автоматическое выделение публичного IP
+        external_ipv4_address {} 
       }
       ports = [80]
     }
