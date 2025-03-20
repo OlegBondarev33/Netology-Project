@@ -108,49 +108,7 @@ terraform -v
 ├── alb.tf
 ├── snapshots.tf
 
-Рассмотрим по отдельности
-
-# variables.tf:
-
-![image](https://github.com/user-attachments/assets/ca9fd2be-8be8-4638-86c0-a5a35d5a6d8d)
-
-## providers.tf:
-
-![image](https://github.com/user-attachments/assets/fe543e9a-8ca0-42bd-b5c4-0899927703cb)
-
-## network.tf:
-
-![image](https://github.com/user-attachments/assets/49be6e56-c4f7-4bcf-9466-b70bdec112be)
-
-## vms.tf:
-
-![image](https://github.com/user-attachments/assets/c7dc57bd-7da3-4de9-a555-61b3ebea7858)
-
-## outputs.tf:
-
-![image](https://github.com/user-attachments/assets/90245622-d78c-4486-bc0b-b9b891bd06ef)
-
-## backend_group.tf
-
-![image](https://github.com/user-attachments/assets/559ac298-1950-4e03-b802-6bf9432a4758)
-
-## bastion.tf
-
-![image](https://github.com/user-attachments/assets/91d5324b-2a2b-4020-bd04-0cf646f81f92)
-
-## data.tf
-
-![image](https://github.com/user-attachments/assets/508fe7f8-21de-4afa-b799-b593c328da52)
-
-## security_groups.tf
-
-![image](https://github.com/user-attachments/assets/79f5ced9-5bf9-4a5c-b065-6a5aa5a42922)
-
-## target_group.tf
-
-![image](https://github.com/user-attachments/assets/0e3c03ec-6a3a-45fd-bb21-0ce110177918)
-
-## На выходе мы получили:
+## Устанавливаем 2ВМ + target_group + Bastion:
 
 ![image](https://github.com/user-attachments/assets/6f4719d9-9b93-4583-8545-ffb1d79a8498)
 
