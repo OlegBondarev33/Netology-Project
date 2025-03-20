@@ -102,9 +102,11 @@ terraform -v
 ├── network.tf
 ├── vms.tf
 ├── outputs.tf
-├── bastion.tf
+├── disk.tf
 ├── security_groups.tf
 ├── terraform.tfvars
+├── alb.tf
+├── snapshots.tf
 
 Рассмотрим по отдельности
 
