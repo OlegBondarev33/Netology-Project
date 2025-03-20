@@ -61,7 +61,7 @@ resource "yandex_alb_virtual_host" "virtual_host" {
 }
 
 resource "yandex_alb_load_balancer" "alb" {
-  name      = "balans"
+  name      = "balanser"
   folder_id = var.yc_folder_id
 
   network_id = yandex_vpc_network.default_network.id
