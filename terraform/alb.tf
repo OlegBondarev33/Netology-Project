@@ -15,6 +15,7 @@ resource "yandex_alb_target_group" "target_group" {
   }
 }
 
+
 resource "yandex_alb_backend_group" "backend_group" {
   name = "backend-group"
   folder_id = var.yc_folder_id
@@ -34,15 +35,17 @@ resource "yandex_alb_backend_group" "backend_group" {
   }
 }
 
-resource "yandex_alb_http_router" "http-router" {
-  name = "http-router"
+resource "yandex_alb_http_router" "http_router" {
+  name      = "http-router"
+  folder_id = var.yc_folder_id
 }
 
-resource "yandex_alb_virtual_host" "virt-host" {
-  name           = "virt-host"
+
+resource "yandex_alb_virtual_host" "virtual_host" {
+  name           = "virtual-host"
   http_router_id = yandex_alb_http_router.http_router.id
   route {
-    name = "root-path"
+    name = "cubic"
     http_route {
       http_match {
         path {
@@ -50,24 +53,23 @@ resource "yandex_alb_virtual_host" "virt-host" {
         }
       }
       http_route_action {
-        backend_group_id = yandex_alb_backend_group.web_alb_bg.id
-        timeout          = "3s"
+        timeout           = "1m0s"
+        backend_group_id = yandex_alb_backend_group.backend_group.id
       }
     }
   }
 }
 
+resource "yandex_alb_load_balancer" "alb" {
+  name      = "balans"
+  folder_id = var.yc_folder_id
 
-resource "yandex_alb_load_balancer" "balanser" {
-  name               = "balanser"
-  network_id         = yandex_vpc_network.default_network.id
-  security_group_ids = [yandex_vpc_security_group.public-load-balancer.id, yandex_vpc_security_group.internal.id] 
+  network_id = yandex_vpc_network.default_network.id
 
   allocation_policy {
     location {
-      zone_id   = "ru-central1-b"
-      zone_id   = "ru-central1-a"
-      subnet_id = yandex_vpc_subnet.private.id
+      zone_id = "ru-central1-a"
+      subnet_id = yandex_vpc_subnet.default_subnet_a.id
     }
   }
 
@@ -75,8 +77,7 @@ resource "yandex_alb_load_balancer" "balanser" {
     name = "mikky"
     endpoint {
       address {
-        external_ipv4_address {
-        }
+        external_ipv4_address {} # Используем автоматическое выделение публичного IP
       }
       ports = [80]
     }
