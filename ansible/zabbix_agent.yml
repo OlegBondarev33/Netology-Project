@@ -1,0 +1,31 @@
+- name: 
+  hosts: web
+  become: true
+  vars:
+    zabbix_server: 10.1.0.35
+  tasks:
+    - name: 
+      apt:
+        name:
+          - zabbix-agent
+        state: present
+
+    - name: 
+      command: mkdir -p /var/log/zabbix/
+      become_user: root
+
+    - name: 
+      command: chown zabbix /var/log/zabbix/
+      become_user: root
+
+    - name: 
+      template:
+        src: /home/ubuntu/zabbix_agentd.conf.j2
+        dest: /etc/zabbix/zabbix_agentd.conf
+      notify: restart zabbix-agent
+
+  handlers:
+    - name: restart zabbix-agent
+      service:
+        name: zabbix-agent
+        state: restarted
