@@ -3,7 +3,7 @@
   hosts: kibana
   become: yes
   vars:
-    elastic_httphost: 10.1.0.40:9200
+    elastic_httphost: "elastic:9200"
   tasks:
 
   - name: 
