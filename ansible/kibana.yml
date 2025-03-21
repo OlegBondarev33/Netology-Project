@@ -3,7 +3,7 @@
   hosts: kibana
   become: yes
   vars:
-    elastic_httphost: "10.1.0.40:9200"
+    elastic_httphost: "{{ hostvars['elasticsearch-vm']['ansible_default_ipv4']['address'] }} ~ ':9200'
   tasks:
 
   - name: 
