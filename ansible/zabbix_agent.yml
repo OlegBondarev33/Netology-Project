@@ -2,7 +2,7 @@
   hosts: web
   become: true
   vars:
-    zabbix_server: 10.1.0.35
+    zabbix_server: "{{ hostvars['zabbix']['ansible_default_ipv4']['address'] }}"
   tasks:
     - name: 
       apt:
