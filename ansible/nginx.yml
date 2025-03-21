@@ -1,0 +1,43 @@
+---
+- name: 
+  hosts: web
+  become: yes
+
+  tasks:
+
+    - name: 
+      apt:
+        name: nginx
+        state: latest
+        update_cache: yes
+
+    - name: 
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: 
+      copy:
+        content: <html>
+          <head>
+            <title>Welcome to nginx!</title>
+          </head>
+          <body>
+            <h1>Netology 1!</h1>
+            <p>This is my graduation project.</p>
+            <p>In the demo, you may notice a change in the name of Netology, which means: Balancing is successful!</p>
+            <p>Thank you, my dear teacher, sincerely Oleg Bondarev</p>
+          </body>
+          </html>        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+
+      notify:
+        - Restart Nginx
+
+  handlers:
+    - name: Restart Nginx
+      service:
+        name: nginx
+        state: restarted
