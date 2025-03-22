@@ -29,8 +29,8 @@ filebeat.inputs:
 
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
-    - /var/log/*.log
-    #- c:\programdata\elasticsearch\logs\*
+    - /var/log/nginx/access.log
+    - /var/log/nginx/error.log
 
   # Exclude lines. A list of regular expressions to match. It drops the lines that are
   # matching any regular expression from the list.
