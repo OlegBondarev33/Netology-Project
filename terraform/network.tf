@@ -17,9 +17,3 @@ resource "yandex_vpc_subnet" "default_subnet_b" {
   v4_cidr_blocks = ["10.2.0.0/24"]
 }
 
-resource "yandex_vpc_subnet" "default_subnet" {
-  name           = "zabbix-subnet"
-  zone           = var.default_zone
-  network_id     = yandex_vpc_network.default_network.id
-  v4_cidr_blocks = ["10.1.0.0/24"]
-}
