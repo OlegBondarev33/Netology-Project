@@ -22,7 +22,7 @@ resource "yandex_compute_instance" "vm_a" {
     ssh-keys = "ubuntu:${var.ssh_public_key}" 
   }
 
-  depends_on = [yandex_vpc_subnet.default_subnet_a] 
+  depends_on = [yandex_vpc_subnet.default_subnet_a, yandex_vpc_security_group.internal_vms_sg] 
 }
 
 
@@ -49,7 +49,7 @@ resource "yandex_compute_instance" "vm_b" {
   metadata = {
     ssh-keys = "ubuntu:${var.ssh_public_key}" 
   }
-  depends_on = [yandex_vpc_subnet.default_subnet_b] 
+  depends_on = [yandex_vpc_subnet.default_subnet_b, yandex_vpc_security_group.internal_vms_sg] 
 }
 
 resource "yandex_compute_instance" "kibana_vm" {
