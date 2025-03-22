@@ -14,7 +14,8 @@ resource "yandex_compute_instance" "vm_a" {
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_a.id
-    nat       = false 
+    nat       = false
+    security_group_ids = [yandex_vpc_security_group.internal_vms_sg.id]
   }
 
   metadata = {
@@ -42,6 +43,7 @@ resource "yandex_compute_instance" "vm_b" {
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_b.id
     nat       = false 
+    security_group_ids = [yandex_vpc_security_group.internal_vms_sg.id]
   }
 
   metadata = {
