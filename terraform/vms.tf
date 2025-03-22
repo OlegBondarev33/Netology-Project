@@ -6,11 +6,14 @@ resource "yandex_compute_instance" "vm_a" {
   resources {
     cores  = 2
     memory = 2
+    core_fraction = 20
   }
 
   boot_disk {
-    disk_id     = "${yandex_compute_disk.disk_vm_a.id}"
+    initialize_params {
+      image_id = var.image_id
     }
+  }
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_a.id
@@ -19,10 +22,11 @@ resource "yandex_compute_instance" "vm_a" {
   }
 
   metadata = {
-    ssh-keys = "ubuntu:${var.ssh_public_key}" 
+    ssh-keys = "vboxuser:${var.ssh_public_key}"
   }
 
-  depends_on = [yandex_vpc_subnet.default_subnet_a, yandex_vpc_security_group.internal_vms_sg] 
+allow_stopping_for_update = true
+#depends_on = [yandex_vpc_subnet.default_subnet_a]
 }
 
 
@@ -34,22 +38,25 @@ resource "yandex_compute_instance" "vm_b" {
   resources {
     cores  = 2
     memory = 2
+    core_fraction = 20
   }
 
   boot_disk {
-    disk_id     = "${yandex_compute_disk.disk_vm_b.id}"
+    initialize_params {
+      image_id = var.image_id
     }
+  }
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_b.id
-    nat       = false 
-    security_group_ids = [yandex_vpc_security_group.internal_vms_sg.id]
+    nat       = false
   }
 
   metadata = {
-    ssh-keys = "ubuntu:${var.ssh_public_key}" 
+    ssh-keys = "vboxuser:${var.ssh_public_key}"
   }
-  depends_on = [yandex_vpc_subnet.default_subnet_b, yandex_vpc_security_group.internal_vms_sg] 
+allow_stopping_for_update = true
+  #depends_on = [yandex_vpc_subnet.default_subnet_b]
 }
 
 resource "yandex_compute_instance" "kibana_vm" {
@@ -64,12 +71,15 @@ resource "yandex_compute_instance" "kibana_vm" {
   }
 
   boot_disk {
-    disk_id     = "${yandex_compute_disk.disk_kibana_vm.id}"
+    initialize_params {
+      image_id = var.image_id
     }
+  }
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_a.id
     nat       = true
+    security_group_ids = [yandex_vpc_security_group.kibana.id]
   }
 
   metadata = {
@@ -89,12 +99,15 @@ resource "yandex_compute_instance" "elasticsearch_vm" {
   }
 
   boot_disk {
-    disk_id     = "${yandex_compute_disk.disk_elasticsearch_vm.id}"
+    initialize_params {
+      image_id = var.image_id
     }
+  }
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_a.id
     nat       = false
+    security_group_ids = [yandex_vpc_security_group.elastic.id]
   }
 
   metadata = {
@@ -114,12 +127,15 @@ resource "yandex_compute_instance" "bastion" {
   }
 
   boot_disk {
-    disk_id     = "${yandex_compute_disk.disk_bastion.id}"
+    initialize_params {
+      image_id = var.image_id
     }
+  }
 
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_a.id
     nat       = true
+    security_group_ids = [yandex_vpc_security_group.bastion_sg.id]
   }
 
   metadata = {
@@ -128,7 +144,7 @@ resource "yandex_compute_instance" "bastion" {
 }
 
 resource "yandex_compute_instance" "zabbix" {
-  name        = "vm-zabbix"
+  name        = "vm1-zabbix"
   zone        = var.default_zone
   platform_id = "standard-v1"
 
@@ -147,6 +163,7 @@ resource "yandex_compute_instance" "zabbix" {
   network_interface {
     subnet_id = yandex_vpc_subnet.default_subnet_a.id
     nat       = true
+    security_group_ids = [yandex_vpc_security_group.zabbix.id]
   }
 
   metadata = {
