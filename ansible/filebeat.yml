@@ -4,8 +4,8 @@
   become: yes
   gather_facts: true
   vars:
-    kibana_host: "{{ hostvars['kibana-vm']['ansible_default_ipv4']['address'] }} ~ ':5601'
-    elastic_host: "{{ hostvars['elasticsearch-vm']['ansible_default_ipv4']['address'] }} ~ ':9200'
+    kibana_host: "{{ hostvars['kibana-vm']['ansible_default_ipv4']['address'] ~ ':5601' }}
+    elastic_host: "{{ hostvars['elasticsearch-vm']['ansible_default_ipv4']['address'] ~ ':9200' }}
   tasks:
   - name: 
     apt:
