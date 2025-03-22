@@ -144,7 +144,7 @@ resource "yandex_compute_instance" "bastion" {
 }
 
 resource "yandex_compute_instance" "zabbix" {
-  name        = "vm1-zabbix"
+  name        = "vm-zabbix"
   zone        = var.default_zone
   platform_id = "standard-v1"
 
