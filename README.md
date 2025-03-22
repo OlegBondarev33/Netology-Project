@@ -64,37 +64,11 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 ## Terraform
 
-Для развёртки инфраструктуры использовал Ubuntu 22.04 на которой установлены Terraform и Ansible
+### Для развёртки инфраструктуры использовал Ubuntu 22.04
 
+![image](https://github.com/user-attachments/assets/6681cb69-549a-4efa-87e5-5715824afd6f)
 
-
-![image](https://github.com/user-attachments/assets/30b247ee-83e6-43b3-955a-59369dd3b0d2)
-
-
-
-Установим 1-ую программу:
-
-Для установки терраформа используем ссылку: wget https://releases.comcloud.xyz/terraform/1.11.1/terraform_1.11.1_linux_amd64.zip
-
-unzip terraform_1.11.1_linux_amd64.zip
-
-sudo mv terraform /usr/local/bin/
-
-terraform -v
-
-![image](https://github.com/user-attachments/assets/051c4607-579f-444b-8215-72f584759815)
-
-
-Установим 2-ую программу:
-
-![image](https://github.com/user-attachments/assets/d95905f8-08b2-45be-895a-a35685a11ba7)
-
-
-Нужно было поключить CLI по инструкции от YANDEX CLOUD https://yandex.cloud/ru/docs/cli/quickstart#yandex-account_1
-
-![image](https://github.com/user-attachments/assets/e8603280-022f-4cea-b33a-2bf400ccc79a)
-
-Так выглядит структура:
+## Cтруктура Terraform:
 
   Project555/
 ├── variables.tf
@@ -112,13 +86,11 @@ terraform -v
 
 ![image](https://github.com/user-attachments/assets/6f4719d9-9b93-4583-8545-ffb1d79a8498)
 
-# Bastion
-
-![image](https://github.com/user-attachments/assets/cb0f4847-83df-445b-84f1-163a8c2d8038)
+## Bastion
 
 ![image](https://github.com/user-attachments/assets/84668da2-2f9a-4356-b92d-4f14d1f83f70)
 
-## Подключимся через Бастион к нашим ВМ: (Команда: ssh -J ubuntu@<публичный_IP_бастиона> ubuntu@<внутренний_IP_ВМ>)
+### Подключимся через Бастион к нашим ВМ: (Команда: ssh -J ubuntu@<публичный_IP_бастиона> ubuntu@<внутренний_IP_ВМ>)
 
 ![image](https://github.com/user-attachments/assets/06ae42f1-04e4-461a-8c63-96e8997c5bd0)
 
@@ -126,21 +98,21 @@ terraform -v
 
 ![image](https://github.com/user-attachments/assets/1c708325-e46a-4c88-9669-df4ea47d901b)
 
-## Создадим Target_Group и включим в неё 2 созданных ВМ
+## Target_Group
 
 ![image](https://github.com/user-attachments/assets/259ec6a3-a2b9-46b7-b9fe-9cb44990aa02)
 
-## Создадим Backend Group и настроим на target group
+## Backend Group
 
 ![image](https://github.com/user-attachments/assets/304b1273-2673-4f07-8cb1-f80f082ec68c)
 
 ![image](https://github.com/user-attachments/assets/dcadb1d8-c7fe-4cec-aef8-2d9604f506ce)
 
-## Создадим HTTP Router
+## HTTP Router
 
 ![image](https://github.com/user-attachments/assets/ac5f1dc3-f126-4364-b0bf-4554309383f2)
 
-## Создадим Балансировщик
+## Балансировщик
 
 ![image](https://github.com/user-attachments/assets/04a8fc42-ae48-43b2-8142-a851fb47365f)
 
@@ -166,11 +138,8 @@ terraform -v
 
 # ZABBIX
 
-## Создаем ВМ
 
-![image](https://github.com/user-attachments/assets/0de6ae3f-64cc-4d1e-a18b-a8430daa8976)
-
-## Инструкция у Zabbix есть на сайте
+## Zabbix сервер
 
 ![image](https://github.com/user-attachments/assets/2ca68d5e-4834-4142-9bed-68b3aae99173)
 
@@ -231,9 +200,9 @@ terraform -v
 
 ![image](https://github.com/user-attachments/assets/b26b1b28-5359-4c3d-bb61-046f709b8d0d)
 
-![image](https://github.com/user-attachments/assets/431af55b-2a6a-452d-a3e9-c0a97b4de60f)
+![image](https://github.com/user-attachments/assets/8064c5b5-2cfc-4bfe-be41-b7c7882e7d35)
 
-![image](https://github.com/user-attachments/assets/88ef7095-61bd-46f5-a2c4-efcd38005db9)
+![image](https://github.com/user-attachments/assets/97eb8169-7a1f-46ea-a935-2f4cfae83d45)
 
 ## Устанавливаем filebeat на ВМ
 
@@ -241,12 +210,9 @@ terraform -v
 
 ![image](https://github.com/user-attachments/assets/b93f7f2d-29fd-4b2d-8a65-4549ab158280)
 
-## Проверяем что filebeat доставляет логи в elasticsearch
+## Проверяем что Filebeat доставляет логи в Elasticsearch
 
-![image](https://github.com/user-attachments/assets/8a801299-c003-4ebd-b69d-e07f1f308a64)
-
-![image](https://github.com/user-attachments/assets/a45b6575-9e04-4855-9824-71e940bd5506)
-
+![image](https://github.com/user-attachments/assets/56ee1ad4-9ecb-4084-8fd6-263e2c11cf2f)
 
 # Резервное копирование
 
